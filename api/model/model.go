@@ -139,6 +139,7 @@ type (
 		Street               string `json:"street"`                  // Улица
 		HouseFiasID          string `json:"house_fias_id"`           // Код ФИАС дома
 		HouseKladrID         string `json:"house_kladr_id"`          // Код КЛАДР дома
+		HouseCadNum          string `json:"house_cadnum"`            // Кадастровый номер дома
 		HouseType            string `json:"house_type"`              // Тип дома (сокращенный)
 		HouseTypeFull        string `json:"house_type_full"`         // Тип дома
 		House                string `json:"house"`                   // Дом
@@ -148,6 +149,7 @@ type (
 		Entrance             string `json:"entrance"`                // Подъезд
 		Floor                string `json:"floor"`                   // Этаж
 		FlatFiasId           string `json:"flat_fias_id"`            // ФИАС-код квартиры
+		FlatCadNum           string `json:"flat_cadnum"`             // Кадастровый номер квартиры
 		FlatType             string `json:"flat_type"`               // Тип квартиры (сокращенный)
 		FlatTypeFull         string `json:"flat_type_full"`          // Тип квартиры
 		Flat                 string `json:"flat"`                    // Квартира
