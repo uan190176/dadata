@@ -1,12 +1,7 @@
 # Client for DaData.ru
 
-Forked from https://github.com/webdeskltd/dadata.
+Forked from https://github.com/ekomobile/dadata.
 
-
-[![Build Status](https://travis-ci.org/ekomobile/dadata.svg)](https://travis-ci.com/ekomobile/dadata)
-[![GitHub release](https://img.shields.io/github/release/ekomobile/dadata.svg)](https://github.com/ekomobile/dadata/releases)
-[![Go Report Card](https://goreportcard.com/badge/github.com/ekomobile/dadata)](https://goreportcard.com/report/github.com/ekomobile/dadata/v2)
-[![GoDoc](https://godoc.org/github.com/ekomobile/dadata/v2?status.svg)](https://godoc.org/github.com/ekomobile/dadata/v2)
 
 DaData API v2
 
@@ -14,7 +9,7 @@ Implemented [Clean](https://dadata.ru/api/clean/) and [Suggest](https://dadata.r
 
 ## Installation
 
-`go get github.com/ekomobile/dadata/v2`
+`go get github.com/uan190176/dadata/v2`
 
 ## Usage
 ```go
