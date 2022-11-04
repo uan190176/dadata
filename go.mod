@@ -1,6 +1,6 @@
-module github.com/ekomobile/dadata/v2
+module github.com/uan190176/dadata/v2
 
-go 1.17
+go 1.19
 
 require github.com/stretchr/testify v1.7.1
 
