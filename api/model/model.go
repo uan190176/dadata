@@ -93,92 +93,92 @@ type (
 
 	// Address base struct for datdata.Address
 	Address struct {
-		Source               string `json:"source"`                  // Исходный адрес одной строкой
-		Result               string `json:"result"`                  // Стандартизованный адрес одной строкой
-		PostalCode           string `json:"postal_code"`             // Индекс
-		Country              string `json:"country"`                 // Страна
-		CountryIsoCode       string `json:"country_iso_code"`        // ISO-код страны
-		FederalDistrict      string `json:"federal_district"`        // Федеральный округ
-		RegionFiasID         string `json:"region_fias_id"`          // Код ФИАС региона
-		RegionKladrID        string `json:"region_kladr_id"`         // Код КЛАДР региона
-		RegionIsoCode        string `json:"region_iso_code"`         // ISO-код региона
-		RegionWithType       string `json:"region_with_type"`        // Регион с типом
-		RegionType           string `json:"region_type"`             // Тип региона (сокращенный)
-		RegionTypeFull       string `json:"region_type_full"`        // Тип региона
-		Region               string `json:"region"`                  // Регион
-		AreaFiasID           string `json:"area_fias_id"`            // Код ФИАС района в регионе
-		AreaKladrID          string `json:"area_kladr_id"`           // Код КЛАДР района в регионе
-		AreaWithType         string `json:"area_with_type"`          // Район в регионе с типом
-		AreaType             string `json:"area_type"`               // Тип района в регионе (сокращенный)
-		AreaTypeFull         string `json:"area_type_full"`          // Тип района в регионе
-		Area                 string `json:"area"`                    // Район в регионе
-		CityFiasID           string `json:"city_fias_id"`            // Код ФИАС города
-		CityKladrID          string `json:"city_kladr_id"`           // Код КЛАДР города
-		CityWithType         string `json:"city_with_type"`          // Город с типом
-		CityType             string `json:"city_type"`               // Тип города (сокращенный)
-		CityTypeFull         string `json:"city_type_full"`          // Тип города
-		City                 string `json:"city"`                    // Город
-		CityArea             string `json:"city_area"`               // Административный округ (только для Москвы)
-		CityDistrictFiasID   string `json:"city_district_fias_id"`   // Код ФИАС района города (заполняется, только если район есть в ФИАС)
-		CityDistrictKladrID  string `json:"city_district_kladr_id"`  // Код КЛАДР района города (не заполняется)
-		CityDistrictWithType string `json:"city_district_with_type"` // Район города с типом
-		CityDistrictType     string `json:"city_district_type"`      // Тип района города (сокращенный)
-		CityDistrictTypeFull string `json:"city_district_type_full"` // Тип района города
-		CityDistrict         string `json:"city_district"`           // Район города
-		SettlementFiasID     string `json:"settlement_fias_id"`      // Код ФИАС нас. пункта
-		SettlementKladrID    string `json:"settlement_kladr_id"`     // Код КЛАДР нас. пункта
-		SettlementWithType   string `json:"settlement_with_type"`    // Населенный пункт с типом
-		SettlementType       string `json:"settlement_type"`         // Тип населенного пункта (сокращенный)
-		SettlementTypeFull   string `json:"settlement_type_full"`    // Тип населенного пункта
-		Settlement           string `json:"settlement"`              // Населенный пункт
-		StreetFiasID         string `json:"street_fias_id"`          // Код ФИАС улицы
-		StreetKladrID        string `json:"street_kladr_id"`         // Код КЛАДР улицы
-		StreetWithType       string `json:"street_with_type"`        // Улица с типом
-		StreetType           string `json:"street_type"`             // Тип улицы (сокращенный)
-		StreetTypeFull       string `json:"street_type_full"`        // Тип улицы
-		Street               string `json:"street"`                  // Улица
-		HouseFiasID          string `json:"house_fias_id"`           // Код ФИАС дома
-		HouseKladrID         string `json:"house_kladr_id"`          // Код КЛАДР дома
-		HouseCadNum          string `json:"house_cadnum"`            // Кадастровый номер дома
-		HouseType            string `json:"house_type"`              // Тип дома (сокращенный)
-		HouseTypeFull        string `json:"house_type_full"`         // Тип дома
-		House                string `json:"house"`                   // Дом
-		BlockType            string `json:"block_type"`              // Тип корпуса/строения (сокращенный)
-		BlockTypeFull        string `json:"block_type_full"`         // Тип корпуса/строения
-		Block                string `json:"block"`                   // Корпус/строение
-		Entrance             string `json:"entrance"`                // Подъезд
-		Floor                string `json:"floor"`                   // Этаж
-		FlatFiasId           string `json:"flat_fias_id"`            // ФИАС-код квартиры
-		FlatCadNum           string `json:"flat_cadnum"`             // Кадастровый номер квартиры
-		FlatType             string `json:"flat_type"`               // Тип квартиры (сокращенный)
-		FlatTypeFull         string `json:"flat_type_full"`          // Тип квартиры
-		Flat                 string `json:"flat"`                    // Квартира
-		FlatArea             string `json:"flat_area"`               // Площадь квартиры
-		SquareMeterPrice     string `json:"square_meter_price"`      // Рыночная стоимость м²
-		FlatPrice            string `json:"flat_price"`              // Рыночная стоимость квартиры
-		PostalBox            string `json:"postal_box"`              // Абонентский ящик
-		FiasID               string `json:"fias_id"`                 // Код ФИАС
-		FiasCode             string `json:"fias_code"`               // Иерархический код адреса в ФИАС (СС+РРР+ГГГ+ППП+СССС+УУУУ+ДДДД)
-		FiasLevel            string `json:"fias_level"`              // Уровень детализации, до которого адрес найден в ФИАС
-		FiasActualityState   string `json:"fias_actuality_state"`    // Признак актуальности адреса в ФИАС
-		KladrID              string `json:"kladr_id"`                // Код КЛАДР
-		CapitalMarker        string `json:"capital_marker"`          // Статус центра
-		Okato                string `json:"okato"`                   // Код ОКАТО
-		Oktmo                string `json:"oktmo"`                   // Код ОКТМО
-		TaxOffice            string `json:"tax_office"`              // Код ИФНС для физических лиц
-		TaxOfficeLegal       string `json:"tax_office_legal"`        // Код ИФНС для организаций
-		Timezone             string `json:"timezone"`                // Часовой пояс
-		GeoLat               string `json:"geo_lat"`                 // Координаты: широта
-		GeoLon               string `json:"geo_lon"`                 // Координаты: долгота
-		BeltwayHit           string `json:"beltway_hit"`             // Внутри кольцевой?
-		BeltwayDistance      string `json:"beltway_distance"`        // Расстояние от кольцевой в км.
+		Source               string `json:"source" db:"source"`                                   // Исходный адрес одной строкой
+		Result               string `json:"result" db:"result"`                                   // Стандартизованный адрес одной строкой
+		PostalCode           string `json:"postal_code" db:"postal_code"`                         // Индекс
+		Country              string `json:"country" db:"country"`                                 // Страна
+		CountryIsoCode       string `json:"country_iso_code" db:"country_iso_code"`               // ISO-код страны
+		FederalDistrict      string `json:"federal_district" db:"federal_district"`               // Федеральный округ
+		RegionFiasID         string `json:"region_fias_id" db:"region_fias_id"`                   // Код ФИАС региона
+		RegionKladrID        string `json:"region_kladr_id" db:"region_kladr_id"`                 // Код КЛАДР региона
+		RegionIsoCode        string `json:"region_iso_code" db:"region_iso_code"`                 // ISO-код региона
+		RegionWithType       string `json:"region_with_type" db:"region_with_type"`               // Регион с типом
+		RegionType           string `json:"region_type" db:"region_type"`                         // Тип региона (сокращенный)
+		RegionTypeFull       string `json:"region_type_full" db:"region_type_full"`               // Тип региона
+		Region               string `json:"region" db:"region"`                                   // Регион
+		AreaFiasID           string `json:"area_fias_id" db:"area_fias_id"`                       // Код ФИАС района в регионе
+		AreaKladrID          string `json:"area_kladr_id" db:"area_kladr_id"`                     // Код КЛАДР района в регионе
+		AreaWithType         string `json:"area_with_type" db:"area_with_type"`                   // Район в регионе с типом
+		AreaType             string `json:"area_type" db:"area_type"`                             // Тип района в регионе (сокращенный)
+		AreaTypeFull         string `json:"area_type_full" db:"area_type_full"`                   // Тип района в регионе
+		Area                 string `json:"area" db:"area"`                                       // Район в регионе
+		CityFiasID           string `json:"city_fias_id" db:"city_fias_id"`                       // Код ФИАС города
+		CityKladrID          string `json:"city_kladr_id" db:"city_kladr_id"`                     // Код КЛАДР города
+		CityWithType         string `json:"city_with_type" db:"city_with_type"`                   // Город с типом
+		CityType             string `json:"city_type" db:"city_type"`                             // Тип города (сокращенный)
+		CityTypeFull         string `json:"city_type_full" db:"city_type_full"`                   // Тип города
+		City                 string `json:"city" db:"city"`                                       // Город
+		CityArea             string `json:"city_area" db:"city_area"`                             // Административный округ (только для Москвы)
+		CityDistrictFiasID   string `json:"city_district_fias_id" db:"city_district_fias_id"`     // Код ФИАС района города (заполняется, только если район есть в ФИАС)
+		CityDistrictKladrID  string `json:"city_district_kladr_id" db:"city_district_kladr_id"`   // Код КЛАДР района города (не заполняется)
+		CityDistrictWithType string `json:"city_district_with_type" db:"city_district_with_type"` // Район города с типом
+		CityDistrictType     string `json:"city_district_type" db:"city_district_type"`           // Тип района города (сокращенный)
+		CityDistrictTypeFull string `json:"city_district_type_full" db:"city_district_type_full"` // Тип района города
+		CityDistrict         string `json:"city_district" db:"city_district"`                     // Район города
+		SettlementFiasID     string `json:"settlement_fias_id" db:"settlement_fias_id"`           // Код ФИАС нас. пункта
+		SettlementKladrID    string `json:"settlement_kladr_id" db:"settlement_kladr_id"`         // Код КЛАДР нас. пункта
+		SettlementWithType   string `json:"settlement_with_type" db:"settlement_with_type"`       // Населенный пункт с типом
+		SettlementType       string `json:"settlement_type" db:"settlement_type"`                 // Тип населенного пункта (сокращенный)
+		SettlementTypeFull   string `json:"settlement_type_full" db:"settlement_type_full"`       // Тип населенного пункта
+		Settlement           string `json:"settlement" db:"settlement"`                           // Населенный пункт
+		StreetFiasID         string `json:"street_fias_id" db:"street_fias_id"`                   // Код ФИАС улицы
+		StreetKladrID        string `json:"street_kladr_id" db:"street_kladr_id"`                 // Код КЛАДР улицы
+		StreetWithType       string `json:"street_with_type" db:"street_with_type"`               // Улица с типом
+		StreetType           string `json:"street_type" db:"street_type"`                         // Тип улицы (сокращенный)
+		StreetTypeFull       string `json:"street_type_full" db:"street_type_full"`               // Тип улицы
+		Street               string `json:"street" db:"street"`                                   // Улица
+		HouseFiasID          string `json:"house_fias_id" db:"house_fias_id"`                     // Код ФИАС дома
+		HouseKladrID         string `json:"house_kladr_id" db:"house_kladr_id"`                   // Код КЛАДР дома
+		HouseCadNum          string `json:"house_cadnum" db:"house_cadnum"`                       // Кадастровый номер дома
+		HouseType            string `json:"house_type" db:"house_type"`                           // Тип дома (сокращенный)
+		HouseTypeFull        string `json:"house_type_full" db:"house_type_full"`                 // Тип дома
+		House                string `json:"house" db:"house"`                                     // Дом
+		BlockType            string `json:"block_type" db:"block_type"`                           // Тип корпуса/строения (сокращенный)
+		BlockTypeFull        string `json:"block_type_full" db:"block_type_full"`                 // Тип корпуса/строения
+		Block                string `json:"block" db:"block"`                                     // Корпус/строение
+		Entrance             string `json:"entrance" db:"entrance"`                               // Подъезд
+		Floor                string `json:"floor" db:"floor"`                                     // Этаж
+		FlatFiasId           string `json:"flat_fias_id" db:"flat_fias_id"`                       // ФИАС-код квартиры
+		FlatCadNum           string `json:"flat_cadnum" db:"flat_cadnum"`                         // Кадастровый номер квартиры
+		FlatType             string `json:"flat_type" db:"flat_type"`                             // Тип квартиры (сокращенный)
+		FlatTypeFull         string `json:"flat_type_full" db:"flat_type_full"`                   // Тип квартиры
+		Flat                 string `json:"flat" db:"flat"`                                       // Квартира
+		FlatArea             string `json:"flat_area" db:"flat_area"`                             // Площадь квартиры
+		SquareMeterPrice     string `json:"square_meter_price" db:"square_meter_price"`           // Рыночная стоимость м²
+		FlatPrice            string `json:"flat_price" db:"flat_price"`                           // Рыночная стоимость квартиры
+		PostalBox            string `json:"postal_box" db:"postal_box"`                           // Абонентский ящик
+		FiasID               string `json:"fias_id" db:"fias_id"`                                 // Код ФИАС
+		FiasCode             string `json:"fias_code" db:"fias_code"`                             // Иерархический код адреса в ФИАС (СС+РРР+ГГГ+ППП+СССС+УУУУ+ДДДД)
+		FiasLevel            string `json:"fias_level" db:"fias_level"`                           // Уровень детализации, до которого адрес найден в ФИАС
+		FiasActualityState   string `json:"fias_actuality_state" db:"fias_actuality_state"`       // Признак актуальности адреса в ФИАС
+		KladrID              string `json:"kladr_id" db:"kladr_id"`                               // Код КЛАДР
+		CapitalMarker        string `json:"capital_marker" db:"capital_marker"`                   // Статус центра
+		Okato                string `json:"okato" db:"okato"`                                     // Код ОКАТО
+		Oktmo                string `json:"oktmo" db:"oktmo"`                                     // Код ОКТМО
+		TaxOffice            string `json:"tax_office" db:"tax_office"`                           // Код ИФНС для физических лиц
+		TaxOfficeLegal       string `json:"tax_office_legal" db:"tax_office_legal"`               // Код ИФНС для организаций
+		Timezone             string `json:"timezone" db:"timezone"`                               // Часовой пояс
+		GeoLat               string `json:"geo_lat" db:"geo_lat"`                                 // Координаты: широта
+		GeoLon               string `json:"geo_lon" db:"geo_lon"`                                 // Координаты: долгота
+		BeltwayHit           string `json:"beltway_hit" db:"beltway_hit"`                         // Внутри кольцевой?
+		BeltwayDistance      string `json:"beltway_distance" db:"beltway_distance"`               // Расстояние от кольцевой в км.
 		// QualityCodeGeoRaw для clean вызовов он int для suggest в адресе банков он string поэтому в поле поставил interface{} чтобы работало и там и там)\
-		QualityCodeGeoRaw      interface{} `json:"qc_geo"`         // Код точности координат
-		QualityCodeCompleteRaw interface{} `json:"qc_complete"`    // Код полноты
-		QualityCodeHouseRaw    interface{} `json:"qc_house"`       // Код проверки дома
-		QualityCodeRaw         interface{} `json:"qc"`             // Код качества
-		UnparsedParts          string      `json:"unparsed_parts"` // Нераспознанная часть адреса. Для адреса
-		Metro                  []*Metro    `json:"metro"`
+		QualityCodeGeoRaw      interface{} `json:"qc_geo" db:"qc_geo"`                 // Код точности координат
+		QualityCodeCompleteRaw interface{} `json:"qc_complete" db:"qc_complete"`       // Код полноты
+		QualityCodeHouseRaw    interface{} `json:"qc_house" db:"qc_house"`             // Код проверки дома
+		QualityCodeRaw         interface{} `json:"qc" db:"qc"`                         // Код качества
+		UnparsedParts          string      `json:"unparsed_parts" db:"unparsed_parts"` // Нераспознанная часть адреса. Для адреса
+		Metro                  []*Metro    `json:"metro" db:"metro"`
 	}
 
 	// AddressResponse api response for address
